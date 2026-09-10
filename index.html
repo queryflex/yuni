@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hızlı Erişim | Üniversite Portalı</title>
+    <!-- Font Awesome İkonları -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --card-hover: #334155;
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --accent-color: #38bdf8;
+            --accent-glow: rgba(56, 189, 248, 0.15);
+            --border-color: #334155;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 480px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 24px;
+        }
+
+        /* Profil Başlık Alanı */
+        .profile {
+            text-align: center;
+        }
+
+        .profile-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #38bdf8, #818cf8);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 36px;
+            color: #ffffff;
+            margin: 0 auto 16px auto;
+            box-shadow: 0 0 20px rgba(56, 189, 248, 0.3);
+        }
+
+        .profile h1 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 6px;
+            letter-spacing: -0.5px;
+        }
+
+        .profile p {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Link Butonları */
+        .links {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        .link-card {
+            display: flex;
+            align-items: center;
+            padding: 16px 20px;
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 14px;
+            color: var(--text-primary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.25s ease;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        .link-card:hover {
+            background-color: var(--card-hover);
+            border-color: var(--accent-color);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 15px -3px var(--accent-glow);
+        }
+
+        .link-card i.left-icon {
+            font-size: 1.25rem;
+            width: 32px;
+            color: var(--accent-color);
+        }
+
+        .link-card .title {
+            flex-grow: 1;
+            font-size: 0.95rem;
+        }
+
+        .link-card i.arrow {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            transition: transform 0.25s ease;
+        }
+
+        .link-card:hover i.arrow {
+            color: var(--accent-color);
+            transform: translateX(4px);
+        }
+
+        /* Alt Bilgi */
+        footer {
+            margin-top: 10px;
+            color: var(--text-secondary);
+            font-size: 0.8rem;
+            text-align: center;
+        }
+
+        footer a {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Başlık & Profil -->
+        <div class="profile">
+            <div class="profile-icon">
+                <i class="fa-solid fa-graduation-cap"></i>
+            </div>
+            <h1>Üniversite Portalı</h1>
+            <p>Hızlı Erişim ve Bağlantı Merkezi</p>
+        </div>
+
+        <!-- Bağlantı Butonları -->
+        <div class="links">
+            
+            <!-- OBS -->
+            <a href="https://obs.universite.edu.tr" target="_blank" class="link-card">
+                <i class="fa-solid fa-user-graduate left-icon"></i>
+                <span class="title">Öğrenci Bilgi Sistemi (OBS)</span>
+                <i class="fa-solid fa-chevron-right arrow"></i>
+            </a>
+
+            <!-- Öğrenci Maili -->
+            <a href="https://mail.google.com" target="_blank" class="link-card">
+                <i class="fa-solid fa-envelope left-icon"></i>
+                <span class="title">Öğrenci E-Posta</span>
+                <i class="fa-solid fa-chevron-right arrow"></i>
+            </a>
+
+            <!-- Öğrenme Yönetim Sistemi / LMS -->
+            <a href="https://lms.universite.edu.tr" target="_blank" class="link-card">
+                <i class="fa-solid fa-book-open left-icon"></i>
+                <span class="title">Ders Portalı (LMS / UZEM)</span>
+                <i class="fa-solid fa-chevron-right arrow"></i>
+            </a>
+
+            <!-- Yemekhane Menüsü -->
+            <a href="https://universite.edu.tr/yemekhane" target="_blank" class="link-card">
+                <i class="fa-solid fa-utensils left-icon"></i>
+                <span class="title">Günün Yemek Menüsü</span>
+                <i class="fa-solid fa-chevron-right arrow"></i>
+            </a>
+
+            <!-- Akademik Takvim -->
+            <a href="https://universite.edu.tr/takvim" target="_blank" class="link-card">
+                <i class="fa-solid fa-calendar-days left-icon"></i>
+                <span class="title">Akademik Takvim</span>
+                <i class="fa-solid fa-chevron-right arrow"></i>
+            </a>
+
+            <!-- Kütüphane -->
+            <a href="https://kutuphane.universite.edu.tr" target="_blank" class="link-card">
+                <i class="fa-solid fa-book-bookmark left-icon"></i>
+                <span class="title">Kütüphane Veri Tabanı</span>
+                <i class="fa-solid fa-chevron-right arrow"></i>
+            </a>
+
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <p>Kolay Erişim Sayfası</p>
+        </footer>
+    </div>
+
+</body>
+</html>
